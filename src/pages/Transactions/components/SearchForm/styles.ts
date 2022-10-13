@@ -9,7 +9,7 @@ export const SearchFormContainer = styled.form`
     flex: 1;
     border-radius: 6px;
     border: none;
-    background: ${({ theme }) =>  theme['gray-900']};
+    background: ${({ theme }) => theme['gray-900']};
     color: ${({ theme }) => theme['gray-300']};
     padding: 1rem;
 
@@ -31,7 +31,12 @@ export const SearchFormContainer = styled.form`
     border-radius: 6px;
     transition: background 0.2s, color 0.2s, border 0.2s;
 
-    &:hover {
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
       background: ${({ theme }) => theme['green-500']};
       border: 1px solid ${({ theme }) => theme['green-500']};
       color: ${({ theme }) => theme.white};

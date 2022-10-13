@@ -9,12 +9,44 @@
       "createdAt": "2022-10-11T18:33:25.957Z"
     },
     {
-      "id": 1,
+      "id": 2,
       "description": "Hamburguer",
       "type": "outcome",
       "category": "Alimentação",
       "price": 50,
       "createdAt": "2022-10-11T19:33:25.957Z"
+    },
+    {
+      "id": 3,
+      "description": "Iginite Rocketseat",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 2000,
+      "createdAt": "2022-10-11T19:59:25.957Z"
+    },
+    {
+      "description": "Ironman",
+      "price": 1500,
+      "category": "Fotografia",
+      "type": "income",
+      "createdAt": "2022-10-13T17:57:58.192Z",
+      "id": 4
+    },
+    {
+      "description": "Job",
+      "price": 30000,
+      "category": "Programação",
+      "type": "income",
+      "createdAt": "2022-10-13T17:59:59.674Z",
+      "id": 5
+    },
+    {
+      "description": "Robbing a bank",
+      "price": 50500,
+      "category": "Robbery",
+      "type": "income",
+      "createdAt": "2022-10-13T18:22:33.721Z",
+      "id": 6
     }
   ]
 }

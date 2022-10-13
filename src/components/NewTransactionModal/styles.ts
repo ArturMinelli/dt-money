@@ -39,7 +39,7 @@ export const Content = styled(Dialog.Content)`
       }
     }
 
-    button[type=submit] {
+    button[type='submit'] {
       height: 50px;
       border: 0;
       background: ${({ theme }) => theme['green-500']};
@@ -51,7 +51,12 @@ export const Content = styled(Dialog.Content)`
       cursor: pointer;
       transition: background 0.2s;
 
-      &:hover {
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      &:not(:disabled):hover {
         background: ${({ theme }) => theme['green-700']};
       }
     }
@@ -66,10 +71,12 @@ export const TransactionType = styled(RadioGroup.Root)`
 `
 
 interface TransactionTypeButtonProps {
-  variant: 'income' | 'outcome';
+  variant: 'income' | 'outcome'
 }
 
-export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButtonProps>`
+export const TransactionTypeButton = styled(
+  RadioGroup.Item,
+)<TransactionTypeButtonProps>`
   background: ${({ theme }) => theme['gray-700']};
   padding: 1rem;
   display: flex;
@@ -83,7 +90,8 @@ export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButt
   transition: background 0.2s;
 
   svg {
-    color: ${({ theme, variant }) => variant === 'income' ? theme['green-300'] : theme['red-300']};
+    color: ${({ theme, variant }) =>
+      variant === 'income' ? theme['green-300'] : theme['red-300']};
   }
 
   &[data-state='unchecked']:hover {
@@ -92,7 +100,8 @@ export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButt
 
   &[data-state='checked'] {
     color: ${({ theme }) => theme.white};
-    background: ${({ theme, variant }) => variant === 'income' ? theme['green-500']: theme['red-500']};
+    background: ${({ theme, variant }) =>
+      variant === 'income' ? theme['green-500'] : theme['red-500']};
   }
 `
 
