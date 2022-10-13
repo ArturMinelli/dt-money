@@ -8,27 +8,24 @@ export function Summary() {
   const transactions = useContextSelector(TransactionsContext, (context) => {
     return context.transactions
   })
-  const { income, outcome } = transactions.reduce(
+  const { income, outcome, total } = transactions.reduce(
     (accum, transaction) => {
       if (transaction.type === 'income') {
-        return {
-          ...accum,
-          income: accum.income + transaction.price,
-        }
+        accum.income += transaction.price
+        accum.total += transaction.price
       } else {
-        return {
-          ...accum,
-          outcome: accum.outcome + transaction.price,
-        }
+        accum.outcome += transaction.price
+        accum.total -= transaction.price
       }
+
+      return accum
     },
     {
       income: 0,
       outcome: 0,
+      total: 0,
     },
   )
-  const total = income - outcome
-
   return (
     <SummaryContainer>
       <SummaryCard>
