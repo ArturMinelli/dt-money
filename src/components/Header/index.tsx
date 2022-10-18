@@ -7,9 +7,12 @@ import { useContextSelector } from 'use-context-selector'
 import { TransactionsContext } from '../../contexts/TransactionsContext'
 
 export function Header() {
-  const isNewTransactionModalOpen = useContextSelector(TransactionsContext, (context) => {
-    return context.isNewTransactionModalOpen
-  })
+  const isNewTransactionModalOpen = useContextSelector(
+    TransactionsContext,
+    (context) => {
+      return context.isNewTransactionModalOpen
+    },
+  )
 
   const toggleModal = useContextSelector(TransactionsContext, (context) => {
     return context.toggleModal
@@ -20,11 +23,11 @@ export function Header() {
       <HeaderContent>
         <img src={logoImg} alt="" />
 
-        <Dialog.Root
-          open={isNewTransactionModalOpen}
-        >
+        <Dialog.Root open={isNewTransactionModalOpen}>
           <Dialog.Trigger asChild>
-            <NewTransactionButton onClick={toggleModal}>Nova transação</NewTransactionButton>
+            <NewTransactionButton onClick={toggleModal}>
+              Nova transação
+            </NewTransactionButton>
           </Dialog.Trigger>
 
           <NewTransactionModal />
