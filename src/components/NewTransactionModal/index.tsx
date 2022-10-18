@@ -43,6 +43,7 @@ export function NewTransactionModal() {
 
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
     createTransaction(data)
+    reset()
     toggleModal()
   }
 
