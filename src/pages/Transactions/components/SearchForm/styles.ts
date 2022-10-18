@@ -18,29 +18,35 @@ export const SearchFormContainer = styled.form`
     }
   }
 
-  button {
+  div {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+  }
+`
 
-    padding: 0.75rem 1rem;
-    background: transparent;
-    border: 1px solid ${({ theme }) => theme['green-300']};
-    color: ${({ theme }) => theme['green-300']};
-    font-weight: bold;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s, border 0.2s;
+export const SearchButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 
-    &:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: 1px solid ${({ theme }) => theme['green-300']};
+  color: ${({ theme }) => theme['green-300']};
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
 
-    &:not(:disabled):hover {
-      background: ${({ theme }) => theme['green-500']};
-      border: 1px solid ${({ theme }) => theme['green-500']};
-      color: ${({ theme }) => theme.white};
-      cursor: pointer;
-    }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    background: ${({ theme }) => theme['green-500']};
+    border: 1px solid ${({ theme }) => theme['green-500']};
+    color: ${({ theme }) => theme.white};
+    cursor: pointer;
   }
 `

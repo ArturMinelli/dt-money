@@ -47,6 +47,86 @@
       "type": "income",
       "createdAt": "2022-10-13T18:22:33.721Z",
       "id": 6
+    },
+    {
+      "description": "Mega Sena",
+      "price": 1000000000,
+      "category": "Sorte",
+      "type": "income",
+      "createdAt": "2022-10-13T20:40:48.215Z",
+      "id": 7
+    },
+    {
+      "description": "Jantar",
+      "price": 39,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-17T22:52:58.561Z",
+      "id": 8
+    },
+    {
+      "description": "Almoço",
+      "price": 45,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-17T22:58:13.095Z",
+      "id": 9
+    },
+    {
+      "description": "Cubo Mágico",
+      "price": 90,
+      "category": "Puzzles",
+      "type": "outcome",
+      "createdAt": "2022-10-18T00:03:02.528Z",
+      "id": 10
+    },
+    {
+      "description": "Café",
+      "price": 12,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-18T00:04:19.656Z",
+      "id": 11
+    },
+    {
+      "description": "something",
+      "price": 12,
+      "category": "something else",
+      "type": "outcome",
+      "createdAt": "2022-10-18T00:04:55.144Z",
+      "id": 12
+    },
+    {
+      "description": "something",
+      "price": 45,
+      "category": "something else",
+      "type": "outcome",
+      "createdAt": "2022-10-18T00:05:50.331Z",
+      "id": 13
+    },
+    {
+      "description": "something",
+      "price": 56,
+      "category": "something else",
+      "type": "outcome",
+      "createdAt": "2022-10-18T00:07:27.241Z",
+      "id": 14
+    },
+    {
+      "description": "p",
+      "price": 56,
+      "category": "something else",
+      "type": "outcome",
+      "createdAt": "2022-10-18T00:07:55.352Z",
+      "id": 15
+    },
+    {
+      "description": "new",
+      "price": 56,
+      "category": "something else",
+      "type": "outcome",
+      "createdAt": "2022-10-18T00:08:30.206Z",
+      "id": 16
     }
   ]
 }

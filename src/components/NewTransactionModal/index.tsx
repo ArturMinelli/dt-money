@@ -33,17 +33,17 @@ export function NewTransactionModal() {
     resolver: zodResolver(newTransactionFormSchema),
   })
 
-  const createTransaction = useContextSelector(
-    TransactionsContext,
-    (context) => {
-      return context.createTransaction
-    },
-  )
+  const createTransaction = useContextSelector(TransactionsContext, (context) => {
+    return context.createTransaction
+  })
+
+  const toggleModal = useContextSelector(TransactionsContext, (context) => {
+    return context.toggleModal
+  })
 
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
     createTransaction(data)
-
-    reset()
+    toggleModal()
   }
 
   return (
@@ -52,7 +52,7 @@ export function NewTransactionModal() {
 
       <Content>
         <Dialog.Title>Nova transação</Dialog.Title>
-        <CloseButton>
+        <CloseButton onClick={toggleModal}>
           <X size={24} />
         </CloseButton>
 

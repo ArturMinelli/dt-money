@@ -1,4 +1,4 @@
-import { SearchFormContainer } from './styles'
+import { SearchButton, SearchFormContainer } from './styles'
 import { MagnifyingGlass } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import * as zod from 'zod'
@@ -38,10 +38,10 @@ export function SearchForm() {
         placeholder="Busque por transações"
         {...register('query')}
       />
-      <button disabled={isSubmitting}>
+      <SearchButton disabled={isSubmitting}>
         <MagnifyingGlass size={20} />
         Buscar
-      </button>
+      </SearchButton>
     </SearchFormContainer>
   )
 }
